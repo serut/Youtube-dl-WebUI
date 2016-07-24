@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends\
 RUN rm -rf /var/lib/apt/lists/*
 
 #Install youtube-dl
-RUN curl https://yt-dl.org/downloads/2015.03.09/youtube-dl -o /usr/local/bin/youtube-dl && chmod a+x /usr/local/bin/youtube-dl
+RUN curl -L https://github.com/rg3/youtube-dl/releases/download/2016.07.24/youtube-dl -o /usr/local/bin/youtube-dl && chmod a+x /usr/local/bin/youtube-dl
 
 WORKDIR /
 RUN mkdir /www
